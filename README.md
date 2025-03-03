@@ -33,7 +33,7 @@ Node (Abstract Base)
     └── Divide
 ```
 
-## Parser Implementation
+## Parser Implementation (reference: https://youtu.be/WdlXBDHXqAs?si=9-02TWpi3O6qytvT)
 
 ### Operator Precedence System
 
