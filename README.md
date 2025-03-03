@@ -114,21 +114,47 @@ Example of how "2 + 3 * 4" is parsed:
 3. Final structure:
 - Add(Value(2), Multiply(Value(3), Value(4)))
 
-## Running the calculator
+## Building and running the calculator
 
 ### Prerequisites
 - CMake 3.10+
 - C++17 compliant compiler
 - Google Test (for unit tests)
+- -Git
+
+### Build commands for LINUX(already pre-built in the repository)
+
+```bash
+mkdir build-linux
+cd build-linux
+cmake ..
+make
+```
 
 ### Run Calculator
 
 ```bash
-cd build
+cd build-linux
 ./calculator
 ```
 
-## Usage Examples
+### Build commands for WINDOWS
+
+```bash
+mkdir build-windows
+cd build-windows
+cmake ..
+cmake --build .
+```
+
+### Run Calculator
+
+```bash
+cd build-windows
+.\Debug\calculator.exe
+```
+
+### Usage Examples
 
 ```
 > 2 + 3 * 4
@@ -143,6 +169,29 @@ Result: 20
 Enter value for x: 3
 Parsed: (3 + 5)
 Result: 8
+```
+
+## Testing
+
+Tests cover:
+- Basic arithmetic
+- Complex expressions
+- Error cases
+- Variable handling
+- Operator precedence
+
+### Run Tests on LINUX
+
+```bash
+cd build-linux
+./calculator_test
+```
+
+### Run Tests on WINDOWS
+
+```bash
+cd build-windows
+.\Debug\calculator_test.exe
 ```
 
 ## Key Features
@@ -160,19 +209,3 @@ Result: 8
 - Invalid syntax checks
 - Parentheses matching
 - Unknown operator detection
-
-## Testing
-
-Tests cover:
-- Basic arithmetic
-- Complex expressions
-- Error cases
-- Variable handling
-- Operator precedence
-
-### Run Tests
-
-```bash
-cd build
-./calculator_test
-```
