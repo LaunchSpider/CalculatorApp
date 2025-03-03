@@ -116,6 +116,8 @@ Example of how "2 + 3 * 4" is parsed:
 
 ## Building and running the calculator
 
+!Command line app(./calculator) and testing sequences(./calculator_test) are alrere pre-build for LINUX, executables(./calculator and ./calculator_test) can be found in the build-linux folder!
+
 ### Prerequisites
 - CMake 3.10+
 - C++17 compliant compiler
@@ -131,7 +133,7 @@ cmake ..
 make
 ```
 
-### Run Calculator
+#### Run Calculator
 
 ```bash
 cd build-linux
@@ -147,7 +149,7 @@ cmake ..
 cmake --build .
 ```
 
-### Run Calculator
+#### Run Calculator
 
 ```bash
 cd build-windows
